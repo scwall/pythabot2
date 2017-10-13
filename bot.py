@@ -6,7 +6,7 @@ from discord.ext import commands
 def keys(file, key):
     with open(file) as k:
         data = json.load(k)
-        return data['token']
+        return data[key]
 
 
 TOKEN = keys('key.json', 'token')
